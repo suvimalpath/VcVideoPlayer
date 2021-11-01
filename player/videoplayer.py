@@ -164,7 +164,7 @@ async def chstream(client, m: Message):
                     await call_py.change_stream(
                         chat_id,
                         AudioVideoPiped(
-                            video,
+                            livelink,
                             HighQualityAudio(),
                             HighQualityVideo()
                         ),
@@ -179,7 +179,7 @@ async def chstream(client, m: Message):
                     await call_py.join_group_call(
                         chat_id,
                         AudioVideoPiped(
-                            video,
+                            livelink,
                             HighQualityAudio(),
                             HighQualityVideo()
                         ),
@@ -213,7 +213,7 @@ async def chstream(client, m: Message):
                     await call_py.join_group_call(
                         chat_id,
                         AudioVideoPiped(
-                            livelink,
+                            video,
                             HighQualityAudio(),
                             HighQualityVideo()
                         ),
