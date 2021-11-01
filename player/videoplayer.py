@@ -117,7 +117,7 @@ async def stream(client, m: Message):
                     await call_py.join_group_call(
                         chat_id,
                         AudioVideoPiped(
-                            livelink,
+                            video,
                             HighQualityAudio(),
                             HighQualityVideo()
                         ),
