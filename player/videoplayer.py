@@ -65,7 +65,6 @@ async def stream(client, m: Message):
                             HighQualityAudio(),
                             HighQualityVideo()
                         ),
-                        stream_type=StreamType().pulse_stream,
                     )
                     await msg.edit_caption(f"**Started [Video Stream]({livelink}) !**")
                     
@@ -106,7 +105,6 @@ async def stream(client, m: Message):
                             HighQualityAudio(),
                             HighQualityVideo()
                         ),
-                        stream_type=StreamType().pulse_stream,
                     )
                     await msg.edit_caption(f"**Started Video Stream!**")
                     
@@ -168,7 +166,6 @@ async def chstream(client, m: Message):
                             HighQualityAudio(),
                             HighQualityVideo()
                         ),
-                        stream_type=StreamType().pulse_stream,
                     )
                     await msg.edit_caption(f"**Started Video Stream!**")
                     
@@ -203,7 +200,6 @@ async def chstream(client, m: Message):
                             HighQualityAudio(),
                             HighQualityVideo()
                         ),
-                        stream_type=StreamType().pulse_stream,
                     )
                     await msg.edit_caption(f"**Started Video Streaming!**")
                 except Exception as e:
