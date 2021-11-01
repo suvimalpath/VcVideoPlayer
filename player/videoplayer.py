@@ -26,7 +26,7 @@ ydl = YoutubeDL(opts)
 @authorized_users_only
 async def stream(client, m: Message):
     replied = m.reply_to_message
-    if not replied or [replied and not [replied.video or replied.document]:
+    if not replied or (replied and not (replied.video or replied.document)):
         if len(m.command) < 2:
             await m.reply("`Reply to some Video File!`")
         else:
@@ -87,7 +87,7 @@ async def stream(client, m: Message):
                 except Exception as e:
                     await msg.edit_caption(f"**Error** -- `{e}`")
    
-    elif replied and [replied.video or replied.document]:
+    elif replied and (replied.video or replied.document):
         if replied.video.thumbs:
             huehue = replied.video.thumbs[0]
             umm = await client.download_media(huehue['file_id'])
