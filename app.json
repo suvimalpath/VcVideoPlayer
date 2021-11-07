@@ -1,6 +1,6 @@
 {
     "name": "VC Video Player",
-    "description": "A VCVideoPlayer Bot for Telegram made with 💞 By @ProErrorXD",
+    "description": "A VCVideoPlayer Bot for Telegram made with 💞 By @DeeCodeBots",
     "logo": "https://telegra.ph/file/e1be1a6fcb7f0e37c297f.jpg",
     "keywords": [
         "pytgcalls",
@@ -8,62 +8,72 @@
         "Vidio Vc Steramer"
     ],
     "website": "https://t.me/DeeCodeBots",
-    "repository": "https://github.com/Sammy-XD/VcVideoPlayer",
+    "repository": "https://github.com/TeamDeeCode/VcVideoPlayer",
     "success_url": "https://t.me/DeeCodeBots",
     "env": {
         "API_ID": {
-            "description": "Your APP_ID from my.telegram.org",
+            "description": "your API_ID from my.telegram.org",
             "required": true
         },
         "API_HASH": {
-            "description": "Your API_HASH from my.telegram.org",
-            "required": true
-        },
-        "ADMIN": {
-            "description": "Your User Id",
-            "required": true
-        },
-        "CHANNEL": {
-            "description": "Your Channel User id",
-            "required": true
-        },
-        "ASSISTANT_NAME": {
-            "description": "Put Your Assistant Username without @",
-            "required": true
-        },
-        "SUPPORT_GROUP": {
-            "description": "put your support group link without @",
-            "required": true
-        },
-        "UPDATES_CHANNEL": {
-            "description": "put your channel link without @",
-            "required": true
-        },
-        "SOURCE_CODE": {
-            "description": "put your GitHub link like this GitHub.com/Sammy-XD/VcVideoPlayer",
-            "required": true 
-        },
-        "BOT_USERNAME": {
-            "description": "Put your bot username",
+            "description": "your API_HASH from my.telegram.org",
             "required": true
         },
         "BOT_TOKEN": {
-            "description": "Your bot token from @botfather",
+            "description": "your bot token from @BotFather",
             "required": true
         },
-        "SUDO_USERS": {
-            "description": "Put Your id",
+        "BOT_USERNAME": {
+            "description": "your bot username from @BotFather",
+            "required": true
+        },
+        "BOT_NAME": {
+            "description": "fill with your bot name from @BotFather",
+            "required": true
+        },
+        "ASSISTANT_NAME": {
+            "description": "fill with the assistant username account without @",
             "required": true
         },
         "SESSION_NAME": {
-            "description": "Pyrogram String Session",
+            "description": "fill with the pyrogram String Session",
             "required": true
+        },
+        "SUDO_USERS": {
+            "description": "list of user ids to be added to sudo member list, or just fill with your id",
+            "required": true
+        },
+        "GROUP_SUPPORT": {
+            "description": "if you have group, then fill the group username here without @",
+            "required": true,
+            "value": "decodeSupport"
+        },
+        "UPDATES_CHANNEL": {
+            "description": "if you have channel, then fill the channel username here without @",
+            "required": true,
+            "value": "DeecodeBots"
+        },
+        "OWNER_NAME": {
+            "description": "fill with your telegram account username without @",
+            "required": true,
+            "value": "piroXpower"
+        },
+        "ALIVE_NAME": {
+            "description": "fill with your telegram account nickname/name",
+            "required": true,
+            "value": "VideoPlayer"
         }
     },
     "addons": [],
     "buildpacks": [
         {
             "url": "heroku/python"
+        },
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
         }
     ],
     "formation": {
