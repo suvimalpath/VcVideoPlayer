@@ -164,8 +164,8 @@ async def play(c: Client, m: Message):
                 else:
                     songname = search[0]
                     url = search[1]
-                    veez, ytlink = await ytdl(url)
-                    if veez == 0:
+                    player, ytlink = await ytdl(url)
+                    if player == 0:
                         await suhu.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
                     else:
                         if chat_id in QUEUE:
@@ -213,8 +213,8 @@ async def play(c: Client, m: Message):
             else:
                 songname = search[0]
                 url = search[1]
-                veez, ytlink = await ytdl(url)
-                if veez == 0:
+                player, ytlink = await ytdl(url)
+                if player == 0:
                     await suhu.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
                 else:
                     if chat_id in QUEUE:
@@ -325,12 +325,12 @@ async def stream(c: Client, m: Message):
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, link)
         if match:
-            veez, livelink = await ytdl(link)
+            player, livelink = await ytdl(link)
         else:
             livelink = link
-            veez = 1
+            player = 1
 
-        if veez == 0:
+        if player == 0:
             await suhu.edit(f"❌ yt-dl issues detected\n\n» `{ytlink}`")
         else:
             if chat_id in QUEUE:
