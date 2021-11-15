@@ -43,7 +43,7 @@
             "description": "list of user ids to be added to sudo member list, or just fill with your id",
             "required": true
         },
-        "GROUP_SUPPORT": {
+        "SUPPORT_GROUP": {
             "description": "if you have group, then fill the group username here without @",
             "required": true,
             "value": "decodeSupport"
