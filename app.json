@@ -31,6 +31,10 @@
             "description": "fill with your bot name from @BotFather",
             "required": true
         },
+        "SOURCE_CODE": {
+            "description": "fill the GitHub source link without https://",
+            "required": true
+        },
         "ASSISTANT_NAME": {
             "description": "fill with the assistant username account without @",
             "required": true
