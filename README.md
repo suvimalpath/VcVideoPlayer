@@ -7,7 +7,8 @@
 ## ✨ Heroku Deploy ✨
 The easiest way to deploy this Bot is via Heroku.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/project?template=https://github.com/TeamDeeCode/VcVideoPlayer)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TeamDeeCode/VcVideoPlayer)
+
 
 # Our Credit 🔥
 
