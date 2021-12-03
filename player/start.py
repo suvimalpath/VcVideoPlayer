@@ -46,7 +46,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton ("Pᴀꜱᴛᴇ", callback_data="paste"),
             ],
             [
-               InlineKeyboardButton("Tᴇʟᴇɢʀᴀᴘʜ ✮ Iɴꜰᴏ", callback_data="tgph"),
+               InlineKeyboardButton("Tᴇʟᴇ ✮ ɢʀᴀᴘʜ", callback_data="tgph"),
             ],
             [
                InlineKeyboardButton("╰✰ Cʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
