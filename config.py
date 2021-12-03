@@ -1,28 +1,18 @@
 import os
+
 from os import getenv
 from dotenv import load_dotenv
 
-if os.path.exists("local.env"):
-    load_dotenv("local.env")
-
 load_dotenv()
 admins = {}
-SESSION_NAME = getenv("SESSION_NAME", "session")
-BOT_TOKEN = getenv("BOT_TOKEN")
-BOT_NAME = getenv("BOT_NAME", "Video Stream")
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
-SOURCE_CODE = getenv("SOURCE_CODE")
-OWNER_NAME = getenv("OWNER_NAME", "piroXpower")
-ALIVE_NAME = getenv("ALIVE_NAME", "VideoPlayer")
-BOT_USERNAME = getenv("BOT_USERNAME", "VcVideoRoBot")
-ASSISTANT_NAME = getenv("ASSISTANT_NAME", "Decode_Assistant")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "DeCodeSupport")
-UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "DeecodeBots")
+ADMIN = int(os.getenv('ADMIN',1956381927))
+CHANNEL = int(os.getenv('CHANNEL',12345))
+API_ID = int(os.getenv("API_ID", "6"))
+API_HASH = os.getenv("API_HASH", "eb06d4abfb49dc3eeb1aeb98ae0f581e")
+BOT_USERNAME = os.getenv("BOT_USERNAME", "VcVideoRobot")
+SUPPORT_GROUP = os.getenv("SUPPORT_GROUP", "DeeCodeSupport")
+UPDATES_CHANNEL = os.getenv("UPDATES_CHANNEL", "DeeCodeBots")
+SOURCE_CODE = os.getenv("SOURCE_CODE", "github.com/Sammy-XD/VcVideoPlayer")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+SESSION_NAME = os.getenv("SESSION_NAME")
 SUDO_USERS = list(map(int, getenv("SUDO_USERS").split()))
-COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! .").split())
-ALIVE_IMG = getenv("ALIVE_IMG", "https://te.legra.ph/file/3230fb4f2943318939118.jpg")
-DURATION_LIMIT = int(getenv("DURATION_LIMIT", "190"))
-IMG_1 = getenv("IMG_1", "https://telegra.ph/file/1fd52c8ef99566ca72159.jpg")
-IMG_2 = getenv("IMG_2", "https://telegra.ph/file/4af38b52cace997702028.jpg")
-IMG_3 = getenv("IMG_3", "https://telegra.ph/file/94eb8c66a7436d0890c75.jpg")
