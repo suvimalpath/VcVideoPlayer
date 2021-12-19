@@ -12,3 +12,4 @@ requests
 asyncio
 youtube_search
 aiohttp
+motor
