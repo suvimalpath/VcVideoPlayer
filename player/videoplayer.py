@@ -45,14 +45,14 @@ async def play(client, m: Message):
                     thumbid = oppp["thumbnails"][0]["url"]
                     split = thumbid.split("?")
                     photoid = split[0].strip()
-                    msg = await m.reply_photo(photo=photoid, caption="`Starting YT Stream...`")
+                    msg = await m.reply_photo(photo=photoid, caption="`♻️ Starting YT Stream...`")
                 except Exception as e:
                     msg = await m.reply(f"{e}")
                     return
             else:
                 livelink = query
                 photoid = "https://telegra.ph/file/b10a65c868444c0611773.jpg"
-                msg = await m.reply_photo(photo=photoid, caption="`Starting Audio Stream...`")
+                msg = await m.reply_photo(photo=photoid, caption="`♻️ Starting Audio Stream...`")
 
             chat_id = m.chat.id
             try:
@@ -89,7 +89,7 @@ async def play(client, m: Message):
                 ),
                 stream_type=StreamType().pulse_stream
             )
-            await msg.edit_caption("**Started Audio Stream!**")
+            await msg.edit_caption("**♻️ Started Audio Stream!**")
         except Exception as e:
             await msg.edit_caption(f"**Error** -- `{e}`")
             await idle()
@@ -121,14 +121,14 @@ async def stream(client, m: Message):
                     thumbid = oppp["thumbnails"][0]["url"]
                     split = thumbid.split("?")
                     photoid = split[0].strip()
-                    msg = await m.reply_photo(photo=photoid, caption="`Starting YT Stream...`")
+                    msg = await m.reply_photo(photo=photoid, caption="`♻️ Starting YT Stream...`")
                 except Exception as e:
                     msg = await m.reply(f"{e}")
                     return
             else:
                 livelink = query
                 photoid = "https://telegra.ph/file/b10a65c868444c0611773.jpg"
-                msg = await m.reply_photo(photo=photoid, caption="`Starting Video Stream...`")
+                msg = await m.reply_photo(photo=photoid, caption="`♻️ Starting Video Stream...`")
 
             chat_id = m.chat.id
             try:
@@ -167,7 +167,7 @@ async def stream(client, m: Message):
                 ),
                 stream_type=StreamType().pulse_stream
             )
-            await msg.edit_caption("**Started Video Stream!**")
+            await msg.edit_caption("**♻️ Started Video Stream!**")
         except Exception as e:
             await msg.edit_caption(f"**Error** -- `{e}`")
             await idle()
@@ -203,13 +203,13 @@ async def chstream(client, m: Message):
                     for f in formats:
                         ytstreamlink = f['url']
                     livelink = ytstreamlink
-                    msg = await m.reply("`Starting YT Stream...`")
+                    msg = await m.reply("`♻️ Starting YT Stream...`")
                 except Exception as e:
                     msg = await m.reply(f"{e}")
                     return
             else:
                 livelink = query
-                msg = await m.reply("`Starting Video Stream...`")
+                msg = await m.reply("`♻️ Starting Video Stream...`")
 
             chat_id = CHANNEL
             try:
@@ -222,7 +222,7 @@ async def chstream(client, m: Message):
                 ),
                 stream_type=StreamType().live_stream
                 )
-                await msg.edit("**Started Channel Stream!**")
+                await msg.edit("**♻️ Started Channel Stream!**")
                 await idle()
             except Exception as e:
                 await msg.edit(f"**Error** -- `{e}`")
@@ -242,7 +242,7 @@ async def chstream(client, m: Message):
                 ),
                 stream_type=StreamType().pulse_stream
             )
-            await msg.edit("**Started Channel Stream!**")
+            await msg.edit("**♻️ Started Channel Stream!**")
         except Exception as e:
             await msg.edit(f"**Error** -- `{e}`")
             await idle()
