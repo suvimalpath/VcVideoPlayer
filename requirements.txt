@@ -13,3 +13,4 @@ asyncio
 youtube-search
 aiohttp
 motor
+pymongo
