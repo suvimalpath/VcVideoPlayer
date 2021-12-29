@@ -39,14 +39,6 @@
             "description": "put your channel link without @",
             "required": true
         },
-        "DB_URL": {
-            "description": "put mongodb url",
-            "required": true
-        },
-        "DB_NAME": {
-            "description": "u can put my example 'my'",
-            "required": true
-        },
         "SOURCE_CODE": {
             "description": "put your GitHub link like this GitHub.com/Sammy-XD/VcVideoPlayer",
             "required": true 
