@@ -12,5 +12,5 @@ requests
 asyncio
 youtube-search
 aiohttp
-motor
+
 
