@@ -63,7 +63,7 @@ def song(client, message):
         )
         m.delete()
     except Exception as e:
-        m.edit("❌ Error")
+        m.edit("❌ Error\nContact Us Here @DeCodeSupport")
         print(e)
 
     try:
